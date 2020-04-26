@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSMpeg Stream Client</title>
+	<style type="text/css">
+		html, body {
+			background-color: #111;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="video-canvas"></canvas>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jsmpeg.min.js"></script>
+	<script type="text/javascript">
+		// Check out https://github.com/phoboslab/jsmpeg
+		$(function() {
+			var url = 'ws://'+document.location.hostname+':8080/video/guest';
+			var canvas = document.getElementById('video-canvas');
+			var player = new JSMpeg.Player(url, {canvas: canvas});
+		});
+	</script>
+</body>
+</html>
