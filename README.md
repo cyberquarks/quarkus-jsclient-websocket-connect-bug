@@ -1,0 +1,1 @@
+# quarkus-jsclient-websocket-connect-bug
